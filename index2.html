@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      class="casio-shell"
+      role="application"
+      aria-label="Casio 2nd Edition Scientific Calculator"
+    >
+      <div class="calculator">
+        <div class="header">
+          <h1 class="title">CASIO</h1>
+
+          <div class="sub-title">fx-82MS</div>
+          <div class="tag">S-V.P.A.M.</div>
+          <div class="sub-title2">2nd edition</div>
+        </div>
+        <div class="display-wrap" aria-label="Display area">
+          <div id="display" />
+          0
+        </div>
+        <br />
+
+        <div class="keypad" id="keypad">
+          <div class="grid">
+            <button class="key func" onclick="appendShift()">Shift</button>
+
+            <button class="key func" onclick="appendAlpha()">Alpha</button>
+
+            <button class="key func" onclick="pushFunc('Mode')">Mode</button>
+
+            <button class="key func" onclick="pushFunc('On')">On</button><br />
+
+            <button class="key func" onclick="pushFunc('^2')">x²</button>
+            <button class="key func" onclick="pushFunc('nCr')">nCr</button>
+
+            <button class="key func" onclick="pushFunc('Pol( )')">Pol()</button>
+            <button class="key func" onclick="pushFunc('^3')">x^3</button>
+            <button class="key func" onclick="pushFunc('log()')">log</button
+            ><br />
+            <button class="key func" onclick="pushFunc('sin( )')">sin</button>
+            <button class="key func" onclick="pushFunc('cos( )')">cos</button>
+            <button class="key func" onclick="append('(')">(</button>
+            <button class="key func" onclick="append(')')">)</button>
+            <button class="key func" onclick="pushFunc('tan( )')">tan</button
+            ><br />
+            <button class="key func" onclick="pushFunc('sqrt( )')">√</button>
+            <button class="key func" onclick="pushFunc('^')">xʸ</button>
+            <button class="key func" onclick="pushFunc('(-)')">(-)</button>
+            <button class="key func" onclick="pushFunc('hyp')">hyp</button>
+            <button class="key func" onclick="pushFunc('ENG')">ENG</button
+            ><br />
+
+            <button class="key" onclick="append('7')">7</button>
+            <button class="key" onclick="append('8')">8</button>
+            <button class="key" onclick="append('9')">9</button>
+            <button class="key op" onclick="deleteOne()">DEL</button>
+            <button class="key clear" onclick="clearAll()">AC</button><br />
+
+            <button class="key" onclick="append('4')">4</button>
+            <button class="key" onclick="append('5')">5</button>
+            <button class="key" onclick="append('6')">6</button>
+            <button class="key acc" onclick="pushFunc('*')">x</button>
+            <button class="key acc" onclick="pushFunc('/')">÷</button><br />
+
+            <button class="key" onclick="append('3')">3</button>
+            <button class="key" onclick="append('2')">2</button>
+            <button class="key" onclick="append('1')">1</button>
+            <button class="key func" onclick="append('+')">+</button>
+            <button class="key func" onclick="append('-')">-</button><br />
+            <button class="key" onclick="append('0')">0</button>
+            <button class="key" onclick="append('.')">.</button>
+            <button class="key" onclick="append('x10^X')">
+              x10<sup>x</sup>
+            </button>
+            <button class="key func" onclick="pushFunc('Ans')">Ans</button>
+            <button class="key" onclick="Result()">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
